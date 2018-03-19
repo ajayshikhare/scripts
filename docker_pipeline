@@ -1,0 +1,12 @@
+pipeline {
+    agent none
+    stages {
+        stage('Build_Dev_Env') {
+            agent {label 'master'}
+            steps {
+                sh 'env'
+                sh 'sh build_box.sh'
+            }
+        }
+    }
+}
