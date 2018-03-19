@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build_Dev_Env') {
+            steps {
+                sh 'env'
+                sh 'sh build_box.sh'
+            }
+        }
+    }
+}
